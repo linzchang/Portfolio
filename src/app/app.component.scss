@@ -1,0 +1,11 @@
+@import '../styles/breakpoints';
+
+.centeredColumn {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    @media screen and (min-width: $breakpoint-xl) {
+        max-width: 80rem;
+    }
+}
