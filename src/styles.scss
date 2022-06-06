@@ -1,0 +1,119 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@import '../src/styles/colors';
+@include mat.core();
+
+$md-bluepalette: (
+  50 : $blue-50,
+  100 : $blue-100,
+  200 : $blue-200,
+  300 : $blue-300,
+  400 : $blue-400,
+  500 : $blue-500,
+  600 : $blue-600,
+  700 : $blue-700,
+  800 : $blue-800,
+  900 : $blue-900,
+  A100 : $blue-a100,
+  A200 : $blue-a200,
+  A400 : $blue-a400,
+  A700 : $blue-a700,
+  contrast: (
+    50 : $black,
+    100 : $black,
+    200 : $black,
+    300 : $white,
+    400 : $white,
+    500 : $white,
+    600 : $white,
+    700 : $white,
+    800 : $white,
+    900 : $white,
+    A100 : $black,
+    A200 : $white,
+    A400 : $white,
+    A700 : $white,
+  )
+);
+
+$md-pinkpalette: (
+  50 : $pink-50,
+  100 : $pink-100,
+  200 : $pink-200,
+  300 : $pink-300,
+  400 : $pink-400,
+  500 : $pink-500,
+  600 : $pink-600,
+  700 : $pink-700,
+  800 : $pink-800,
+  900 : $pink-900,
+  A100 : $white,
+  A200 : $white,
+  A400 : $white,
+  A700 : $white,
+  contrast: (
+    50 : $black,
+    100 : $black,
+    200 : $black,
+    300 : $black,
+    400 : $black,
+    500 : $black,
+    600 : $black,
+    700 : $black,
+    800 : $black,
+    900 : $black,
+    A100 : $black,
+    A200 : $black,
+    A400 : $black,
+    A700 : $black,
+  )
+);
+
+$md-orangepalette: (
+  50 : $orange-50,
+  100 : $orange-100,
+  200 : $orange-200,
+  300 : $orange-300,
+  400 : $orange-400,
+  500 : $orange-500,
+  600 : $orange-600,
+  700 : $orange-700,
+  800 : $orange-800,
+  900 : $orange-900,
+  A100 : $orange-a100,
+  A200 : $orange-a200,
+  A400 : $orange-a400,
+  A700 : $orange-a700,
+  contrast: (
+    50 : $black,
+    100 : $black,
+    200 : $black,
+    300 : $black,
+    400 : $black,
+    500 : $black,
+    600 : $black,
+    700 : $black,
+    800 : $black,
+    900 : $black,
+    A100 : $black,
+    A200 : $black,
+    A400 : $black,
+    A700 : $black,
+  )
+);
+
+$primary: mat.define-palette($md-bluepalette, 500);
+$accent: mat.define-palette($md-pinkpalette, 500);
+$warn: mat.define-palette($md-orangepalette, 500);
+
+$theme: mat.define-light-theme(
+  (
+    color: (
+    primary: $primary,
+    accent: $accent
+    warn: $warn,
+    )
+  )
+);
+
+@include mat.all-component-themes($theme);
