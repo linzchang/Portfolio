@@ -1,0 +1,32 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/colors';
+
+.hero {
+  padding: 20rem 2rem;
+  background: $beige;
+  background: linear-gradient(0deg, $beige 0%, $pink-900 100%);
+
+  @media screen and (min-width: $breakpoint-m) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero__text {
+      max-width: 60%;
+      margin-right: 3rem;
+    }
+  }
+}
+
+.hero__icon {
+  text-align: center;
+  padding: 2rem;
+
+  mat-icon {
+    transform: scale(2);
+  }
+
+  @media screen and (min-width: $breakpoint-m) {
+    padding: 0;
+  }
+}
