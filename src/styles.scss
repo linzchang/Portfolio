@@ -105,6 +105,9 @@ $md-orangepalette: (
 $primary: mat.define-palette($md-bluepalette, 500);
 $accent: mat.define-palette($md-pinkpalette, 500);
 $warn: mat.define-palette($md-orangepalette, 500);
+$theme-typography: mat.define-typography-config(
+  $font-family: 'Raleway',
+);
 
 $theme: mat.define-light-theme(
   (
@@ -112,7 +115,8 @@ $theme: mat.define-light-theme(
     primary: $primary,
     accent: $accent,
     warn: $warn,
-    )
+    ),
+    typography: $theme-typography,
   )
 );
 
