@@ -42,17 +42,24 @@ h1 {
 }
 
 .hero__link {
-  color: $blue-500;
-  font-weight: bold;
   text-decoration: none;
-  box-shadow: inset 0 0 0 0 $blue-500;
-  color: $blue-500;
-  margin: 0 -.25rem;
-  padding: 0 .25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  position: relative;
+  color: $black;
+}
 
-  &:hover {
-    box-shadow: inset 200px 0 0 0 $blue-500;
-    color: $beige;
-  }
+.hero__link::before {
+  content: '';
+  background-color: $pink-500;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: .5rem;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+.hero__link:hover::before {
+  bottom: 0;
+  height: 100%;
 }
