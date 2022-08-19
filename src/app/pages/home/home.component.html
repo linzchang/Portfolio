@@ -11,7 +11,9 @@
 <app-about id="about"></app-about>
 
 <section id="projects">
-  <app-project title="Project1" description="Blah blah blah this is a description"></app-project>
+  <ng-container *ngFor="let project of projects">
+    <app-project [project]="project"></app-project>
+  </ng-container>
 </section>
 
 <section id="contact" class="section">
